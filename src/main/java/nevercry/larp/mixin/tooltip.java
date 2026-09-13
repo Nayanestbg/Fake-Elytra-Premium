@@ -48,14 +48,18 @@ public class tooltip {
                 .formatted(Formatting.GRAY));
         tooltip.add(Text.literal("Mending")
                 .formatted(Formatting.GRAY));
-        tooltip.add(
-                Text.literal("Worth: ")
-                        .formatted(Formatting.GRAY)
-                        .append(
-                                Text.literal("$33.88K")
-                                        .styled(style -> style.withColor(0x00fc00))
-                        )
-        );
+    tooltip.add(
+        Text.literal("Worth: ")
+                .formatted(Formatting.GRAY)
+                .append(
+                        Text.literal("$")
+                                .styled(style -> style.withColor(0x00fc00))
+                )
+                .append(
+                        Text.literal("330M")
+                                .formatted(Formatting.WHITE)
+                )
+);
 
         cir.setReturnValue(tooltip);
     }
