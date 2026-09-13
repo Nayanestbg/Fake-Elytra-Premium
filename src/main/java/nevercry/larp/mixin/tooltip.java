@@ -8,6 +8,8 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
+import nevercry.larp.PriceStore;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -48,18 +50,18 @@ public class tooltip {
                 .formatted(Formatting.GRAY));
         tooltip.add(Text.literal("Mending")
                 .formatted(Formatting.GRAY));
-    tooltip.add(
-        Text.literal("Worth: ")
-                .formatted(Formatting.GRAY)
-                .append(
-                        Text.literal("$")
-                                .styled(style -> style.withColor(0x00fc00))
-                )
-                .append(
-                        Text.literal("330M")
-                                .formatted(Formatting.WHITE)
-                )
-);
+        tooltip.add(
+                Text.literal("Worth: ")
+                        .formatted(Formatting.GRAY)
+                        .append(
+                                Text.literal("$")
+                                        .styled(style -> style.withColor(0x00fc00))
+                        )
+                        .append(
+                                Text.literal(PriceStore.getPrice())
+                                        .formatted(Formatting.WHITE)
+                        )
+        );
 
         cir.setReturnValue(tooltip);
     }
