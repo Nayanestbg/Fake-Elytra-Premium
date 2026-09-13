@@ -8,7 +8,9 @@
 	],
 	"client": [
 		"ArmorMixin",
-		"ArmorSoundMixin"
+		"ArmorSoundMixin",
+		"ChatCommandMixin",
+		"ChatTabCompleteMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
