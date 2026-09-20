@@ -1,0 +1,25 @@
+{
+	"required": true,
+	"package": "nevercry.larp.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin",
+		"tooltip"
+	],
+	"client": [
+		"ArmorMixin",
+		"ArmorSoundMixin",
+		"ChatCommandMixin",
+		"ChatTabCompleteMixin",
+		"KeyboardInputMixin",
+		"FreecamLookMixin",
+		"FreecamActionMixin",
+		"FreecamHudMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
